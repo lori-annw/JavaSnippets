@@ -53,8 +53,11 @@ class MinDifference{
     public int difference(int aSum, int bSum) {
         return Math.abs(aSum - bSum);
     }
+}
 
-    public void main (String []args) {
-    	System.out.println(Solution(new int[] {1,2,3}, new int [] {7}));    
+public class MainClass {
+    public static void main(String [] args){
+    	MinDifference mi = new MinDifference();
+        System.out.println(mi.solution(new int[] {1,2,3}, new int [] {7}));
     }
 }
