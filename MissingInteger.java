@@ -35,7 +35,11 @@ class MissingInteger{
 	//Take the total without the missing number, and subtract the total with the missing number
         return sumRange-sumArray;
     }
+}
+
+public class MainClass {
     public static void main(String [] args){
-        Solution(new int [] {1,2,4,5}
+    	MissingInteger mi = new MissingInteger();
+        System.out.println(mi.solution(new int [] {1,2,4,5}));
     }
 }
