@@ -31,14 +31,14 @@ class MinDifference{
         //set default 
         aSum = A[0];
         for (int i = 1; i < A.length; i++) {
-            bSum+=A[i];
+            bSum += A[i];
         }
         int minDiff = difference(aSum,bSum);
         
         int P = 2;
         while (P < A.length) {
-            aSum+= A[P-1];
-            bSum-= A[P-1];
+            aSum += A[P-1];
+            bSum -= A[P-1];
             minDiff = min(minDiff,difference(aSum,bSum));
             P++;
         }
