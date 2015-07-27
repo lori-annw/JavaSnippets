@@ -13,7 +13,7 @@ Restrictions: O(N) worst-case runtime, O(1) worst-case space complexity
 Score Received: 100%
 Time used: 
 
-Website: https://codility.com/demo/take-sample-test/tape_equilibrium/
+Website: https://codility.com/demo/take-sample-test/passing_cars/
 */
 // you can also use imports, for example:
 // import java.util.*;
