@@ -10,7 +10,6 @@ Time used:
 
 Straightforward Approach 1/2: O(N) time soln with a loop and counter, unrealistic when N = 2 billion.
 Awesome Approach 3: We want the number of digits in some range that are divisible by K.
-
   *Simple case: assume range [0 .. n*K]
   N/K returns the number of digits between [0,N) that are divisible by K, assuming N%K = 0 (aka. N is divisible by K)
   ex. N = 9, K = 3, Num digits = |{0 3 6}| = 3 = 9/3
@@ -18,9 +17,7 @@ Awesome Approach 3: We want the number of digits in some range that are divisibl
   Similarly for N/K + 1 and [0,N]
   ex. N = 9, K = 3, Num digits = |{0 3 6 9}| = 4 = 9/3 + 1
   
-  I think really understanding the above fact is the trickiest part of this question.
-  
-  
+  I think really understanding the above fact is the trickiest part of this question, I cannot explain exactly why it works.
   The rest boils down to prefix sums and handling special cases.
   
   -----
@@ -29,8 +26,8 @@ Awesome Approach 3: We want the number of digits in some range that are divisibl
   But wait! We can fix this by calculating our own nice upper and lower bounds and using some subtraction magic :)
   
   1. First find the closest upper and lower in the range [A,B] that are divisible by K.
-  Lower bound: ex. A = 10, K = 3, new_A = 12
-  
+  Upper bound (easier): ex. B = 10, K = 3, new_B = 9... the pattern is B - B%K
+  Lower bound: ex. A = 10, K = 3, new_A = 12... try a few more and you will see the pattern  is A - A%K + K
   
   2. Then calculate the following using the above technique*:
   Determine the total number of digits X between [0,B] that are divisible by K
@@ -42,7 +39,7 @@ Awesome Approach 3: We want the number of digits in some range that are divisibl
 
 Website: https://codility.com/demo/take-sample-test/count_div/
 */
-class Solution {
+class CountDiv {
     public int solution(int A, int B, int K) {
         int firstDivisble = A%K == 0 ? A : A + (K - A%K);
         int lastDivisible = B%K == 0 ? B : B - B%K; //unnecessary since B/K behaves this way automatically.
