@@ -18,7 +18,7 @@ class MaxProductOfThree {
         //Case 1:
         int posProduct = A[n-1]*A[n-2]*A[n-3];
         
-        //Case 2: Where the two smallest numbers are < 0 but the A[1]*A[2] > A[n-2]*A[n-3]
+        //Case 2: Where the two smallest numbers are < 0 but A[0]*A[1] > A[n-2]*A[n-3]
         int negProduct = A[n-1]*A[0]*A[1]; 
    
         
