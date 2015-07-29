@@ -3,7 +3,8 @@
 Author: Lori-Ann
 Date: 28/07/2015
 Purpose: My solution to the nesting demo test on @Codility!
-Description: Maximum product of three elements from an array of integers
+Description: Properly nested strings. Valid forms below.
+1. "" , 2. (U) where U is properly nested, 3. UW where U and W are properly nested.
 Restrictions: O(N) worst-case runtime, O(1) worst-case space complexity
 Score Received: 100%
 Time used: approx. 10 minutes
